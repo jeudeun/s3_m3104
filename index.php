@@ -1,5 +1,6 @@
 <!DOCTYPE HTML>
 <html>
+
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -67,6 +68,10 @@
 	</head>
 	<body>
 		
+		<?php
+		include_once('connexion_sql.php');
+		?>
+
 	<div class="gtco-loader"></div>
 	
 	<div id="page">
@@ -78,25 +83,23 @@
 			
 			<div class="row">
 				<div class="col-sm-4 col-xs-12">
-					<div id="gtco-logo"><a href="page.html">HELP <em>.</em></a></div>
+					<div id="gtco-logo"><a href="page.php">HELP <em>.</em></a></div>
 				</div>
 				<div class="col-xs-8 text-right menu-1">
 					<ul>
-						<li><a href="index.html">Accueil</a></li>
-						<li><a href="#">Actualite</a></li>
+						<li><a href="index.php">Accueil</a></li>
+						<li><a href="Actualite.php">Actualite</a></li>
 						<li class="has-dropdown">
-							<a href="#">Profil</a>
+							<a href="Profil.php">Profil</a>
 							<ul class="dropdown">
-								<li><a href="#">Suivi quotidien</a></li>
 								<li><a href="#">Service</a></li>
 								<li><a href="#">Branding</a></li>
 								<li><a href="#">API</a></li>
 							</ul>
 						</li>
-						<li><a href="#">Suivi quotidien</a></li>
-						<li><a href="#">Service</a></li>
-						<li><a href="#">Forum</a></li>
-						<li><a href="#">Aide</a></li>
+						<li><a href="Service.php">Service</a></li>
+						<li><a href="Forum.php">Forum</a></li>
+						<li><a href="Aide.php">Aide</a></li>
 						<!--<li class="btn-cta"><a href="#"><span>Créer evenement</span></a></li>-->
 						
 					</ul>
@@ -162,17 +165,17 @@
 										</div>
 
 										<div class="tab-content-inner" data-content="login">
-											<form action="#">
+											<form action="connexion.php" method="POST">
 												<div class="row form-group">
 													<div class="col-md-12">
 														<label for="username">Username or Email</label>
-														<input type="text" class="form-control" id="username">
+														<input type="text" class="form-control" id="username" name="username"required>
 													</div>
 												</div>
 												<div class="row form-group">
 													<div class="col-md-12">
 														<label for="password">Password</label>
-														<input type="password" class="form-control" id="password">
+														<input type="password" class="form-control" id="password" name="password"required>
 													</div>
 												</div>
 
