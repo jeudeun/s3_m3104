@@ -2,45 +2,40 @@
  class PersHandi
         {
 
-          private $_id;
-          private $_nom;
-          private $_prenom;
+          private $_idHandicape;
+          private $_idUtilisateur;
+          private $_description;
 
 
 
-          function get_idP()
+          function get_idHandicape()
           {
-            return $this->_idP;
+            return $this->_idHandicape;
           }
 
-          function get_nomP()
+          function get_idUtilisateur()
           {
-            return $this->_nomP;
+            return $this->$_idUtilisateur;
           }
 
-          function get_prenomP()
+          function get_description()
           {
-            return $this->_prenomP;
+            return $this->_description;
           }
 
-          function set_idP($a)
+          function set_idHandicape($a)
           {
-            $this->_idP = $a;
+            $this->_idHandicape = $a;
           }
 
-          function set_nomP($b)
+          function set_idUtilisateur($b)
           {
             $this->_nomP = $b;
           }
 
-          function set_prenomP($c)
+          function set_description($c)
           {
-            $this->_prenomP = $c;
-          }
-
-          function afficher()
-          {
-            echo 'je suis la personne n°'.$this->_idP.' je m\'appelle : '.$this->_nomP.' '.$this->_prenomP;
+            $this->_description = $c;
           }
         }
 

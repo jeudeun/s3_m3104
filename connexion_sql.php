@@ -3,8 +3,8 @@
 // Connexion à la base de données
 try
 {
-    $bdd = new PDO('mysql:host=localhost;dbname=bdd_pro_php;charset=utf8', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-    echo "Connecter.<br>";
+    $bdd = new PDO('mysql:host=localhost;dbname=m3104_bdd;charset=utf8', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+    echo "Connecter a la BDD.<br>";
 }
 catch(Exception $e)
 {

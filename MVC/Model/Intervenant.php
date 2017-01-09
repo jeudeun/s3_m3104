@@ -2,46 +2,83 @@
  class Intervenant
         {
 
-          private $_id;
-          private $_nom;
-          private $_prenom;
+          private $_idIntervenant;
+          private $_idUtilisateur;
+          private $_aideMenage;
+          private $_aideRepas;
+          private $_dameCompanie;
+          private $_aidePersonne;
 
 
 
-          function get_idP()
+
+          function get_idIntervenant()
           {
-            return $this->_idP;
+            return $this->_idIntervenant;
           }
 
-          function get_nomP()
+          function set_idIntervenant($x)
           {
-            return $this->_nomP;
+            $this->_idIntervenant = $x;
           }
 
-          function get_prenomP()
+
+          function get_idUtilisateur()
           {
-            return $this->_prenomP;
+            return $this->_idUtilisateur;
           }
 
-          function set_idP($a)
+          function set_idUtilisateur($x)
           {
-            $this->_idP = $a;
+            $this->_idUtilisateur = $x;
           }
 
-          function set_nomP($b)
+
+          function get_aideMenage()
           {
-            $this->_nomP = $b;
+            return $this->_aideMenage;
           }
 
-          function set_prenomP($c)
+          function set_aideMenage($x)
           {
-            $this->_prenomP = $c;
+            $this->_aideMenage = $x;
           }
 
-          function afficher()
+
+          function get_aideRepas()
           {
-            echo 'je suis la personne n°'.$this->_idP.' je m\'appelle : '.$this->_nomP.' '.$this->_prenomP;
+            return $this->_aideRepas;
           }
+
+          function set_aideRepas($x)
+          {
+            $this->_aideRepas = $x;
+          }
+
+
+          function get_dameCompanie()
+          {
+            return $this->_dameCompanie;
+          }
+
+          function set_dameCompanie($x)
+          {
+            $this->_dameCompanie = $x;
+          }
+
+
+          function get_aidePersonne()
+          {
+            return $this->_aidePersonne;
+          }
+
+          function set_aidePersonne($x)
+          {
+            $this->_aidePersonne = $x;
+          }
+
+
+          
         }
 
 ?>

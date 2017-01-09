@@ -151,9 +151,9 @@
 												</div>
 												
 												<FORM>
-													<INPUT type= "radio" name="valide" value="v"> VALIDE
+													<INPUT type= "radio" name="valide" value="v"> VALIDE 
 													<INPUT type= "radio" name="valide" value="h"> HANDICAPE
-												</FORM>
+												</FORM></br>
 												
 
 												<div class="row form-group">
@@ -168,7 +168,7 @@
 											<form action="connexion.php" method="POST">
 												<div class="row form-group">
 													<div class="col-md-12">
-														<label for="username">Username or Email</label>
+														<label for="username">Email</label>
 														<input type="text" class="form-control" id="username" name="username"required>
 													</div>
 												</div>
@@ -177,12 +177,14 @@
 														<label for="password">Password</label>
 														<input type="password" class="form-control" id="password" name="password"required>
 													</div>
-												</div>
+												</div></br>
 
 												<div class="row form-group">
+													<center>
 													<div class="col-md-12">
 														<input type="submit" class="btn btn-primary" value="Login">
 													</div>
+												</center>
 												</div>
 											</form>	
 										</div>
