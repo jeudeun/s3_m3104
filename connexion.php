@@ -57,7 +57,7 @@ $_SESSION['user'] = new Utilisateur;
 			//redirige vers la page accueil
 			if($isInter == true)
 			{
-
+			
 		    $_SESSION['user'] = serialize($user);
 		    //session_register(user);
 				//echo "je suis un intervenant";

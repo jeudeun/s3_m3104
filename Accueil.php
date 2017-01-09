@@ -71,6 +71,19 @@
 		<?php
 		include_once('connexion_sql.php');
 		include_once('charge.php');
+
+		if (isset($_SESSION['user'])) {
+			$accueil = "Accueil.php";
+			$d = "visible";
+		}
+		else{
+			session_destroy(user);
+			$accueil = "index.php";
+			$d = "hidden";
+		}
+
+
+
 		?>
 
 	<div class="gtco-loader"></div>
@@ -84,11 +97,11 @@
 			
 			<div class="row">
 				<div class="col-sm-4 col-xs-12">
-					<div id="gtco-logo"><a href="page.php">HELP <em>.</em></a></div>
+					<div id="gtco-logo"><a href=<?php echo $accueil ?>>HELP <em>.</em></a></div>
 				</div>
 				<div class="col-xs-8 text-right menu-1">
 					<ul>
-						<li><a href="index.php">Accueil</a></li>
+						<li><a href=<?php echo $accueil ?>>Accueil</a></li>
 						<li><a href="Actualite.php">Actualite</a></li>
 						<li class="has-dropdown">
 							<a href="Profil.php">Profil</a>
@@ -101,7 +114,7 @@
 						<li><a href="Service.php">Service</a></li>
 						<li><a href="Forum.php">Forum</a></li>
 						<li><a href="Aide.php">Aide</a></li>
-						<!--<li class="btn-cta"><a href="#"><span>Créer evenement</span></a></li>-->
+						<li class="<?php echo $d?>" ><a href="index.php"><span></span>Déconnexion</a></li>
 						
 					</ul>
 				</div>

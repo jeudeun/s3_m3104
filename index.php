@@ -70,6 +70,10 @@
 		
 		<?php
 		include_once('connexion_sql.php');
+		session_start();
+		session_destroy();
+
+
 		?>
 
 	<div class="gtco-loader"></div>

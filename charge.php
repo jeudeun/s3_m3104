@@ -12,5 +12,8 @@
 		if (isset($_SESSION['user'])) {
 			$User = unserialize($_SESSION['user']);
 			$User->connecter();
+		}
+		else{
+			session_destroy(user);
 		}	
 		?>
