@@ -114,7 +114,7 @@
 
           function connecter()
           {
-            echo 'Connecter en tant que : '.$this->_nom.' '.$this->_prenom;
+            echo 'Connecté en tant que : '.$this->_nom.' '.$this->_prenom;
           }
         }
 

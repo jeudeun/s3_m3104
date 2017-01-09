@@ -6,7 +6,7 @@
           private $_idUtilisateur;
           private $_description;
 
-
+          
 
           function get_idHandicape()
           {

@@ -69,8 +69,8 @@
 	<body>
 		
 		<?php
-		include_once('../connexion_sql.php');
-				include_once('../charge.php');
+		include_once('connexion_sql.php');
+		include_once('charge.php');
 		?>
 
 	<div class="gtco-loader"></div>
@@ -122,21 +122,7 @@
 							<span class="intro-text-small">Bienvenue sur HELP</span>
 							<h1>AIDE AUX HANDICAPES.</h1>	
 						</div>
-						<div class="col-md-4 col-md-push-1 animate-box" data-animate-effect="fadeInRight">
-							<div class="form-wrap">
-								<div class="tab">
-									<ul class="tab-menu">
-										<li class="active gtco-first"><a href="#" data-tab="signup">Sign up</a></li>
-										<li class="gtco-second"><a href="#" data-tab="login">Login</a></li>
-									</ul>
-									<div class="tab-content">
-										<div class="tab-content-inner active" data-content="signup">
-
-
-									</div>
-								</div>
-							</div>
-						</div>
+						<!image>
 					</div>
 							
 					
