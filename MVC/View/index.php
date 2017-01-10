@@ -73,6 +73,12 @@
 		session_start();
 		session_destroy();
 
+			if (isset($_SESSION['user'])) {
+			$d = "visible";
+			}	
+		else{
+			$d = "hidden";
+		}	
 
 		?>
 
@@ -93,9 +99,9 @@
 					<ul>
 						<li><a href="index.php">Accueil</a></li>
 						<li><a href="Actualite.php">Actualite</a></li>
-						<li><a href="Profil.php">Profil</a></li>
+						<li class="<?php echo $d?>"><a href="Profil.php">Profil</a></li>
 						<li class="has-dropdown">
-							<a href="Service.php">Service</a>
+							<a class="<?php echo $d?>" href="Service.php">Service</a>
 							<ul class="dropdown">
 								<li><a href="aidemenage.php">AideMenage</a></li>
 								<li><a href="aidepersonne.php">AidePersonne</a></li>
@@ -103,7 +109,7 @@
 								<li><a href="damecompagnie.php">Companie</a></li>
 							</ul>
 						</li>
-						<li><a href="Forum.php">Forum</a></li>
+						<li class="<?php echo $d?>"><a href="Forum.php">Forum</a></li>
 						<li><a href="Aide.php">Aide</a></li>
 					</ul>
 				</div>
@@ -140,10 +146,10 @@
 
 
 												  	//formulaire intervenant si valide est cocher
-													//include("Inscription_Formular_Inter.html");
+													include("Inscription_Formular_Inter.html");
 												  
 												  	//formulaire handicaper si handicaper est cocher
-													//include("Inscription_Formular_Handicap.html");
+													include("Inscription_Formular_Handicap.html");
 												  
 												?>
 

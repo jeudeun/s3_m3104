@@ -54,6 +54,27 @@
 	
 		<?php
 		include_once('../Model/connexion_sql.php');
+		include_once("../Model/Intervenant.class.php");
+		include_once("../Model/PersHandi.class.php");
+		include_once("../Model/Utilisateur.class.php");
+
+		$User = new Utilisateur;
+		$interU = new Intervenant;
+		$handiU = new PersHandi;
+
+		session_start();
+
+
+		if (isset($_SESSION['user'])) {
+			$User = unserialize($_SESSION['user']);
+			$User->connecter();
+			$accueil = "Accueil.php";
+			$d = "visible";
+		}
+		else{
+			$accueil = "index.php";
+			$d = "hidden";
+		}	
 		?>
 
 	<div class="gtco-loader"></div>
@@ -85,7 +106,7 @@
 						</li>
 						<li><a href="Forum.php">Forum</a></li>
 						<li><a href="Aide.php">Aide</a></li>
-						<!--<li class="btn-cta"><a href="#"><span>Créer evenement</span></a></li>-->						
+						<li class="<?php echo $d?>"><a href="index.php"><span>Déconnexion</span></a></li>						
 					</ul>
 				</div>			
 			</div>					

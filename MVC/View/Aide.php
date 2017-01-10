@@ -90,9 +90,9 @@
 					<ul>
 						<li><a id='acc' href=<?php echo $accueil ?>>Accueil</a></li>
 						<li><a href="Actualite.php">Actualite</a></li>
-						<li><a href="Profil.php">Profil</a></li>
+						<li class="<?php echo $d?>"><a href="Profil.php">Profil</a></li>
 						<li class="has-dropdown">
-							<a href="Service.php">Service</a>
+							<a class="<?php echo $d?>" href="Service.php">Service</a>
 							<ul class="dropdown">
 								<li><a href="aidemenage.php">AideMenage</a></li>
 								<li><a href="aidepersonne.php">AidePersonne</a></li>
@@ -100,7 +100,7 @@
 								<li><a href="damecompagnie.php">Companie</a></li>
 							</ul>
 						</li>
-						<li><a href="Forum.php">Forum</a></li>
+						<li class="<?php echo $d?>"><a href="Forum.php">Forum</a></li>
 						<li><a href="Aide.php">Aide</a></li>
 						<li class="<?php echo $d?>"><a href="index.php"><span>Déconnexion</span></a></li>	
 					</ul>
