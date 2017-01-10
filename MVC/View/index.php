@@ -69,7 +69,7 @@
 	<body>
 		
 		<?php
-		include_once('connexion_sql.php');
+		include_once('../Model/connexion_sql.php');
 		session_start();
 		session_destroy();
 
@@ -93,19 +93,18 @@
 					<ul>
 						<li><a href="index.php">Accueil</a></li>
 						<li><a href="Actualite.php">Actualite</a></li>
+						<li><a href="Profil.php">Profil</a></li>
 						<li class="has-dropdown">
-							<a href="Profil.php">Profil</a>
+							<a href="Service.php">Service</a>
 							<ul class="dropdown">
-								<li><a href="#">Service</a></li>
-								<li><a href="#">Branding</a></li>
-								<li><a href="#">API</a></li>
+								<li><a href="aidemenage.php">AideMenage</a></li>
+								<li><a href="aidepersonne.php">AidePersonne</a></li>
+								<li><a href="aiderepas.php">AideRepas</a></li>
+								<li><a href="damecompagnie.php">Companie</a></li>
 							</ul>
 						</li>
-						<li><a href="Service.php">Service</a></li>
 						<li><a href="Forum.php">Forum</a></li>
 						<li><a href="Aide.php">Aide</a></li>
-						<!--<li class="btn-cta"><a href="#"><span>Créer evenement</span></a></li>-->
-						
 					</ul>
 				</div>
 			</div>
@@ -134,42 +133,37 @@
 									</ul>
 									<div class="tab-content">
 										<div class="tab-content-inner active" data-content="signup">
-											<form action="#">
-												<div class="row form-group">
-													<div class="col-md-12">
-														<label for="username">Username or Email</label>
-														<input type="text" class="form-control" id="username">
-													</div>
-												</div>
-												<div class="row form-group">
-													<div class="col-md-12">
-														<label for="password">Password</label>
-														<input type="password" class="form-control" id="password">
-													</div>
-												</div>
-												<div class="row form-group">
-													<div class="col-md-12">
-														<label for="password2">Repeat Password</label>
-														<input type="password" class="form-control" id="password2">
-													</div>
-												</div>
+											<form method="post" action="">
 												
+
+												<?php 
+
+
+												  	//formulaire intervenant si valide est cocher
+													//include("Inscription_Formular_Inter.html");
+												  
+												  	//formulaire handicaper si handicaper est cocher
+													//include("Inscription_Formular_Handicap.html");
+												  
+												?>
+
+
+
 												<FORM>
-													<INPUT type= "radio" name="valide" value="v"> VALIDE 
-													<INPUT type= "radio" name="valide" value="h"> HANDICAPE
+													<INPUT id="valide" name="valide" type= "radio" name="valide"  value="oui" checked ?> VALIDE 
+													<INPUT id="handicape" name="handicape" type= "radio" name="valide"  value="non" ?> HANDICAPE
 												</FORM></br>
-												
 
 												<div class="row form-group">
 													<div class="col-md-12">
 														<input type="submit" class="btn btn-primary" value="Sign up">
 													</div>
 												</div>
-											</form>	
+											</form>
 										</div>
 
 										<div class="tab-content-inner" data-content="login">
-											<form action="connexion.php" method="POST">
+											<form action="../Controller/connexion.php" method="POST">
 												<div class="row form-group">
 													<div class="col-md-12">
 														<label for="username">Email</label>

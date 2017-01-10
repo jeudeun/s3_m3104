@@ -1,0 +1,40 @@
+*{
+	margin:0;
+}
+.NavigationBar{ 
+	display:inline;
+	text-align:center;
+	padding-left:780px;
+	padding-right:6px;
+}
+.NavigationBar1{
+	margin:0;
+	padding-top:90px;
+	padding-bottom:50px;
+	list-style-type:none;
+}
+.NavigationBar1 a:link,a:visited{
+	width:35px;
+	padding:40px;
+	padding-top:12px;
+	padding-bottom:12px;
+	text-decoration:none;
+	text-transform:uppercase;
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+	background-color:#7D89AD;
+	border:1px solid #6BB9F0;
+	color:black;
+	font-weight:500;
+}
+.NavigationBar1 a:hover,a:active{
+	padding:40px;
+	padding-top:12px;
+	padding-bottom:12px;
+	text-transform:uppercase;
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+	background-color:#6BB9F0;
+	font-weight:900;
+}
+

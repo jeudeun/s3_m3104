@@ -1,7 +1,7 @@
 		<?php
-		include_once("MVC/Model/Intervenant.class.php");
-		include_once("MVC/Model/PersHandi.class.php");
-		include_once("MVC/Model/Utilisateur.class.php");
+		include_once("../Model/Intervenant.class.php");
+		include_once("../Model/PersHandi.class.php");
+		include_once("../Model/Utilisateur.class.php");
 
 		$User = new Utilisateur;
 		$interU = new Intervenant;

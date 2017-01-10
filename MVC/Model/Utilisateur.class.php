@@ -108,7 +108,7 @@
 
           function adresseC()
           {
-           echo $this->_numero.' '.$this->_adresse.' a '.$this->_ville;
+           echo $this->_adresse.' a '.$this->_ville;
           }
           
 

@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="PhpFormular.css" />
+        <title>Formulaire</title>
+    </head>
+
+    <body>
+	<div class="container">  
+  <form id="contact" action="Inscription_Formular_Inter.php" method="post">
+		 <link rel="stylesheet" href="style.css" />
+    <h3>FORMULAIRE INTERVENENT</h3>
+    <fieldset>
+      <input placeholder="NOM" type="nom" tabindex="1"  name= "nom" required autofocus>
+    </fieldset>
+    <fieldset>
+      <input placeholder="PRENOM" type="prenom" tabindex="2" name="prenom"required>
+    </fieldset>
+	<fieldset>
+      <input placeholder="EMAIL" type="prenom" tabindex="2" name="email" required>
+    </fieldset>
+	<fieldset>
+      <input placeholder="MOT DE PASSE" type="password" tabindex="2" name="mdp" required>
+    </fieldset>
+    <fieldset>
+      <input placeholder="TELEPHONE" type="tel" tabindex="3" name="tel" required>
+    </fieldset>
+	<fieldset>
+      <input placeholder="ADRESSE" type="adresse" tabindex="4" name="adresse" required>
+    </fieldset>
+    <fieldset>
+      <input placeholder="CODE POSTAL" type="cp" tabindex="4" name="codepo" required>
+    </fieldset>
+	<fieldset>
+      <input placeholder="VILLE" type="ville" tabindex="4" name="ville" required>
+    </fieldset>
+	
+	<fieldset>
+		<INPUT type="checkbox" name="choix1" value="1"> AIDE MENAGE <br>
+		<INPUT type="checkbox" name="choix2" value="2"> AIDE REPAS <br>
+		<INPUT type="checkbox" name="choix3" value="3"> DAME COMPAGNIE <br>
+		<INPUT type="checkbox" name="choix4" value="4"> AIDE PERSONNE <br>
+	
+    <fieldset>
+      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+    </fieldset>
+	
+	<?php 
+	include("../Controller/Inscription_Formular_Inter.php");
+	?>
+
+  </form>
+</div>
+</body>
+</html>

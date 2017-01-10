@@ -1,0 +1,50 @@
+h1{
+    text-align:center;
+     margin-top:200px
+}
+ul li{
+	font-family:Times New Roman;
+	color:white;
+}
+img{
+	margin:auto;
+}
+table,tr,td {
+      width: 1000px;
+      border: 2px solid black;
+      margin: 10px;
+      margin-left:auto;
+      margin-right:auto;
+background-color: #2A353C;
+}
+tr,td{
+	padding: 10px;
+}
+table{
+	border-collapse:collapse;
+}
+#center{
+	text-align:center;
+}
+.containertopic {
+  max-width: 2000px;
+  width: 100%;
+  margin-top:10px;
+  margin-left:auto;
+  margin-right:auto;
+  position:relative;
+  text-align:center;
+}
+.containertopic1 {
+  max-width: 2000px;
+  width: 100%;
+  margin-top:100px;
+  margin-left:auto;
+  margin-right:auto;
+  position:relative;
+  text-align:center;
+}
+
+
+
+

@@ -1,9 +1,9 @@
 <?php
 
-	include_once('connexion_sql.php');	
-	include_once('MVC/Model/Utilisateur.class.php');
-	include_once('MVC/Model/Intervenant.class.php');
-	include_once('MVC/Model/PersHandi.class.php');
+	include_once('../Model/connexion_sql.php');	
+	include_once('../Model/Utilisateur.class.php');
+	include_once('../Model/Intervenant.class.php');
+	include_once('../Model/PersHandi.class.php');
 
 	if(isset($_POST['username']) && isset($_POST['password']))
 	{
@@ -19,7 +19,8 @@
 	$handiU = new PersHandi;
 
 	$isInter = false;
-echo $isInter;
+	echo $isInter;
+	
 while ($donnees = $reponse->fetch()){
 	
 	$user->set_idUtilisateur($donnees['idUtilisateur']);
@@ -61,7 +62,7 @@ $_SESSION['user'] = new Utilisateur;
 		    $_SESSION['user'] = serialize($user);
 		    //session_register(user);
 				//echo "je suis un intervenant";
-				echo "<meta http-equiv=\"Refresh\" content=0.1;URL=\"Accueil.php\" />";
+				echo "<meta http-equiv=\"Refresh\" content=0.1;URL=\"../View/Accueil.php\" />";
 				  //header("Location: Accueil.php?user=$user");
 				  //echo $user->connecter();
 				  //echo '<td>'.'<br />';
@@ -72,7 +73,7 @@ $_SESSION['user'] = new Utilisateur;
 
 			$_SESSION['user'] = serialize($user);
 				//echo "je suis une personne en difficulter";
-				echo "<meta http-equiv=\"Refresh\" content=0.1;URL=\"Accueil.php\" />";
+				echo "<meta http-equiv=\"Refresh\" content=0.1;URL=\"../View/Accueil.php\" />";
 				  //header("Location: Accueil.php?user=$user");
 				  //echo $user->connecter();
 				  //echo '<td>'.'<br />';

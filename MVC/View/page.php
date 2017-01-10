@@ -48,10 +48,10 @@
 	<body>
 	
 		<?php
-		include_once('connexion_sql.php');
-		include_once("MVC/Model/Intervenant.class.php");
-		include_once("MVC/Model/PersHandi.class.php");
-		include_once("MVC/Model/Utilisateur.class.php");
+		include_once('../Model/connexion_sql.php');
+		include_once("../Model/Intervenant.class.php");
+		include_once("../Model/PersHandi.class.php");
+		include_once("../Model/Utilisateur.class.php");
 
 		$User = new Utilisateur;
 		$interU = new Intervenant;
@@ -62,16 +62,13 @@
 
 		if (isset($_SESSION['user'])) {
 			$User = unserialize($_SESSION['user']);
-			//session_unset('user');
 			$User->connecter();
 			$accueil = "Accueil.php";
 			$d = "visible";
 		}
 		else{
-			//session_destroy(user);
 			$accueil = "index.php";
 			$d = "hidden";
-
 		}	
 
 		?>
@@ -93,15 +90,16 @@
 					<ul>
 						<li><a id='acc' href=<?php echo $accueil ?>>Accueil</a></li>
 						<li><a href="Actualite.php">Actualite</a></li>
+						<li><a href="Profil.php">Profil</a></li>
 						<li class="has-dropdown">
-							<a href="Profil.php">Profil</a>
+							<a href="Service.php">Service</a>
 							<ul class="dropdown">
 								<li><a href="#">Service</a></li>
 								<li><a href="#">Branding</a></li>
 								<li><a href="#">API</a></li>
+								<li><a href="#">API</a></li>
 							</ul>
 						</li>
-						<li><a href="Service.php">Service</a></li>
 						<li><a href="Forum.php">Forum</a></li>
 						<li><a href="Aide.php">Aide</a></li>
 						<li class="<?php echo $d?>"><a href="index.php"><span>Déconnexion</span></a></li>	

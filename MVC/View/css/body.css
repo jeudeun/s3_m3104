@@ -1,0 +1,31 @@
+
+h1,h2{
+	padding-top:5px;
+	padding-bottom:3px;
+}
+
+#center{
+	text-align:center;
+}
+
+
+table,tr,td {
+      width: 1000px;
+      border: 2px solid black;
+      margin: 10px;
+      margin-left:auto;
+      margin-right:auto;
+background-color: #2A353C;
+	  text-align:center;
+}
+tr,td{
+	padding: 30px;
+}
+
+table{
+	border-collapse:collapse;
+	
+}
+
+
+

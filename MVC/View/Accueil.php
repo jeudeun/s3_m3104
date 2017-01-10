@@ -69,8 +69,21 @@
 	<body>
 		
 		<?php
-		include_once('../connexion_sql.php');
-				include_once('../charge.php');
+		include_once('../Model/connexion_sql.php');
+		include_once('../Controller/charge.php');
+
+		if (isset($_SESSION['user'])) {
+			$accueil = "Accueil.php";
+			$d = "visible";
+		}
+		else{
+			session_destroy(user);
+			$accueil = "index.php";
+			$d = "hidden";
+		}
+
+
+
 		?>
 
 	<div class="gtco-loader"></div>
@@ -84,24 +97,25 @@
 			
 			<div class="row">
 				<div class="col-sm-4 col-xs-12">
-					<div id="gtco-logo"><a href="page.php">HELP <em>.</em></a></div>
+					<div id="gtco-logo"><a href=<?php echo $accueil ?>>HELP <em>.</em></a></div>
 				</div>
 				<div class="col-xs-8 text-right menu-1">
 					<ul>
-						<li><a href="index.php">Accueil</a></li>
+						<li><a href=<?php echo $accueil ?>>Accueil</a></li>
 						<li><a href="Actualite.php">Actualite</a></li>
+						<li><a href="Profil.php">Profil</a></li>
 						<li class="has-dropdown">
-							<a href="Profil.php">Profil</a>
+							<a href="Service.php">Service</a>
 							<ul class="dropdown">
-								<li><a href="#">Service</a></li>
-								<li><a href="#">Branding</a></li>
-								<li><a href="#">API</a></li>
+								<li><a href="aidemenage.php">AideMenage</a></li>
+								<li><a href="aidepersonne.php">AidePersonne</a></li>
+								<li><a href="aiderepas.php">AideRepas</a></li>
+								<li><a href="damecompagnie.php">Companie</a></li>
 							</ul>
 						</li>
-						<li><a href="Service.php">Service</a></li>
 						<li><a href="Forum.php">Forum</a></li>
 						<li><a href="Aide.php">Aide</a></li>
-						<!--<li class="btn-cta"><a href="#"><span>Créer evenement</span></a></li>-->
+						<li class="<?php echo $d?>" ><a href="index.php"><span></span>Déconnexion</a></li>
 						
 					</ul>
 				</div>
@@ -122,21 +136,7 @@
 							<span class="intro-text-small">Bienvenue sur HELP</span>
 							<h1>AIDE AUX HANDICAPES.</h1>	
 						</div>
-						<div class="col-md-4 col-md-push-1 animate-box" data-animate-effect="fadeInRight">
-							<div class="form-wrap">
-								<div class="tab">
-									<ul class="tab-menu">
-										<li class="active gtco-first"><a href="#" data-tab="signup">Sign up</a></li>
-										<li class="gtco-second"><a href="#" data-tab="login">Login</a></li>
-									</ul>
-									<div class="tab-content">
-										<div class="tab-content-inner active" data-content="signup">
-
-
-									</div>
-								</div>
-							</div>
-						</div>
+						<li style="background-image: url(images/img_1.jpg)"></li>
 					</div>
 							
 					

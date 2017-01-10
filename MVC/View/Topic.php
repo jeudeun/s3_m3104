@@ -36,8 +36,8 @@
 
     <!-- Theme style  -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel ="stylesheet" href="css/forum.css">
-    <link rel ="stylesheet" href="css/topic.css">
+    <link rel="stylesheet" href="css/forum.css">
+    <link rel="stylesheet" href="css/topic.css">
 
     <!-- Modernizr JS -->
     <script src="js/modernizr-2.6.2.min.js"></script>
@@ -95,16 +95,15 @@ else{
                         <ul>
                             <li><a id='acc' href=<?php echo $accueil ?>>Accueil</a></li>
                             <li><a href="Actualite.php">Actualite</a></li>
-                        <li><a href="Profil.php">Profil</a></li>
-                        <li class="has-dropdown">
-                            <a href="Service.php">Service</a>
-                            <ul class="dropdown">
-                                <li><a href="aidemenage.php">AideMenage</a></li>
-                                <li><a href="aidepersonne.php">AidePersonne</a></li>
-                                <li><a href="aiderepas.php">AideRepas</a></li>
-                                <li><a href="damecompagnie.php">Companie</a></li>
-                            </ul>
-                        </li>
+                            <li class="has-dropdown">
+                                <a href="Profil.php">Profil</a>
+                                <ul class="dropdown">
+                                    <li><a href="#">Service</a></li>
+                                    <li><a href="#">Branding</a></li>
+                                    <li><a href="#">API</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="Service.php">Service</a></li>
                             <li><a href="Forum.php">Forum</a></li>
                             <li><a href="Aide.php">Aide</a></li>
                             <li class="<?php echo $d?>"><a href="index.php"><span>Déconnexion</span></a></li>
@@ -112,11 +111,32 @@ else{
                     </div>
                 </div>
 
+            
+
+			</div>
+            <div class="containertopic">
+                <h1>Topic</h1>
+				
+				<form action="http://localhost/s3_m3104/MVC/View/Forum1.php">
+				
+                <fieldset>
+                    <label>Topic : </label><input placeholder="TITRE" type="titre" name="Topic" tabindex="1" required autofocus style="height:50px;width:200px;">
+                </fieldset>
             </div>
+            <div class="containertopic1">
+                <fieldset>
+                    <label>Description : </label><input placeholder="DESCRIPTION" type="description" name="Contenu" tabindex="2" required style="height:100px;width:400px;">
+                </fieldset>
+                <br><br>
+               <!--   <input type="reset" value="Annuler"> -->
+                 <input type="submit" value="Valider"> 
+			  </form>
+            </div>
+        
 
-        </nav>
-
-        <header id="gtco-header" class="gtco-cover" role="banner" style="background-image: url(images/img_6.jpg)">
+		
+		</nav>   
+	<header id="gtco-header" class="gtco-cover" role="banner" style="background-image: url(images/img_6.jpg)">
             <div class="overlay"></div>
             <div class="gtco-container">
                 <div class="row">
@@ -127,72 +147,11 @@ else{
 
                     </div>
                 </div>
-				
-				
-				
-				
-				
-				
-                <div id="headforum">
-                    <nav>
-                        <ul class="NavigationBar1">
-                            <li class="NavigationBar"><a href="Topic.php">CREER</a></li>
-                        </ul>
-                    </nav>
-                    <h1>Liste de topic</h1>
-                </div>
-				
-				
-				
-	
-<?php
-	afficher();	
-	function afficher()
-	{
-		//$topic = $_GET["Topic"];
-		//$cont = $_GET["Contenu"];
-		ini_set("display_errors", "Off");
-		//error_reporting(E_ALL | E_STRICT);
-	// Connexion à la base de données
-		$con = mysql_connect("localhost","root","");
-		if (!$con){
-		  die('Could not connect: ' . mysql_error());
-		  } 
 
-		mysql_select_db("m3104_bdd", $con);
-		//$sql = "delete from forum where topic='dds'";
-		//$result2 = mysql_query($sql);
-	
-		//$result1 = mysql_query("INSERT INTO forum(topic, contenu) values('$topic','$cont')");
-		//$query = mysql_query($result1);
-		
-		$result = mysql_query("SELECT * FROM forum");
+            </div>
+            </div>
+        </header>
 
-		echo "<table border='1'>
-		<tr>
-		<th>Topic</th>
-		<th>Contenu</th>
-		<th>Date</th>
-		</tr>";
-		
-	
-		while($row = mysql_fetch_array($result))
-		  {
-		  echo "<tr>";
-		  echo "<td>".$row['topic']."</td>";
-		  echo "<td>".$row['contenu']."</td>";
-		  echo "<td>".$row['date']."</td>";
-		  echo "<tr>";
-		 //echo "<br />";
-		  }
-		  echo "</table>";	  
-		// print_r($contenent);
-
-		mysql_close($con);
-	}
-	?>	
-            </div>	
-		   </header>
 
         <footer id="gtco-footer" role="contentinfo">
             <div class="gtco-container">

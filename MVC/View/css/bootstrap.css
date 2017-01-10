@@ -1502,6 +1502,7 @@ pre code {
 
   .col-md-offset-0 {
     margin-left: 0%;
+    margin-top: 4.5%;
   }
 
   .col-md-offset-1 {
@@ -1773,7 +1774,7 @@ caption {
 }
 
 th {
-  text-align: left;
+  text-align: center;
 }
 
 .table {
